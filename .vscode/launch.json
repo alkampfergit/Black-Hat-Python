@@ -9,10 +9,20 @@
             "type": "python",
             "request": "launch",
             "program": "${file}",
-            "console": "integratedTerminal"
+            "pythonPath": "C:\\Python27\\python.exe",
+            "console": "integratedTerminal",
         },
         {
-            "name": "Python: Current File (Integrated Terminal)",
+            "name": "Python: arguments",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "pythonPath": "C:\\Python27\\python.exe",
+            "console": "integratedTerminal",
+            "args": ["-l", "-p", "5123", "-c"]
+        },
+        {
+            "name": "Python3: Current File (Integrated Terminal)",
             "type": "python",
             "request": "launch",
             "program": "${file}",
