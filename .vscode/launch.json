@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python: Current File (Integrated Terminal)",
+            "name": "Python2: Current File (Integrated Terminal)",
             "type": "python",
             "request": "launch",
             "program": "${file}",
@@ -13,7 +13,7 @@
             "console": "integratedTerminal",
         },
         {
-            "name": "Python: arguments",
+            "name": "Python2: arguments",
             "type": "python",
             "request": "launch",
             "program": "${file}",
