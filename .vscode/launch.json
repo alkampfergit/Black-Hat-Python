@@ -13,6 +13,14 @@
             "console": "integratedTerminal",
         },
         {
+            "name": "Python2: Current File linux",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "pythonPath": "/usr/bin/python",
+            "console": "integratedTerminal",
+        },
+        {
             "name": "Python2: arguments",
             "type": "python",
             "request": "launch",
